@@ -149,6 +149,31 @@
   }
 }
     }
+
+    .venta-simulada {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.venta-simulada.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
     
   </style>
 </head>
@@ -289,6 +314,40 @@
       showSlides(slideIndex);
     }, 5000); // Cambia el tiempo si quieres
   </script>
+
+<div class="venta-simulada" id="venta-simulada">
+  <i class="fas fa-check-circle"></i>
+  <span id="mensaje-venta">Lucía R. de Colombia se unió al curso hace 3 minutos</span>
+</div>
+
+<script>
+const nombres = [
+  "Lucía R.", "José M.", "Daniela P.", "Carlos T.", "Valeria N.",
+  "Mateo G.", "Ana L.", "Santiago R.", "Camila S.", "Andrés Z."
+];
+
+const paises = ["México", "Perú", "Argentina", "Chile", "Colombia"];
+
+const tiempos = ["hace 2 minutos", "hace 5 minutos", "hace 10 minutos", "justo ahora", "hace 1 minuto"];
+
+function mostrarVentaSimulada() {
+  const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+  const pais = paises[Math.floor(Math.random() * paises.length)];
+  const tiempo = tiempos[Math.floor(Math.random() * tiempos.length)];
+
+  const mensaje = `${nombre} de ${pais} se unió al curso ${tiempo}`;
+  document.getElementById("mensaje-venta").textContent = mensaje;
+
+  const popup = document.getElementById("venta-simulada");
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000); // dura 5 segundos visible
+}
+
+setInterval(mostrarVentaSimulada, 15000); // aparece cada 15 segundos
+</script>
 
 </body>
 </html>
