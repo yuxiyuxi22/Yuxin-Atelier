@@ -38,15 +38,18 @@
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.curso-card img {
-  width: 340px;
-  height: 340px;
+.img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* cuadrado perfecto */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .curso-card h3 {
@@ -286,7 +289,9 @@
   <div class="course-grid">
     <!-- Curso 1 -->
     <a href="curso1.html"  target="_blank" class="course-card">
+      <div class="img-wrapper">
       <img src="/img/foto01.png" alt="Curso 1">
+      </div>
       <h3>Curso 1</h3>Manos de Seda: Tratamiento para rejuvenecer las manos
       <p>Aprende desde cero</p>
     </a>
