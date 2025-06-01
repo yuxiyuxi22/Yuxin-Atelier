@@ -268,12 +268,12 @@
   color: #fbbc04;
   font-size: 1.1rem;
   margin: 0 1px;
-  transition: transform 0.2s ease, text-shadow 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .curso-card:hover .estrella {
   transform: scale(1.2);
-  text-shadow: 0 0 6px rgba(255, 193, 7, 0.7);
+  filter: drop-shadow(0 0 4px #fbbc04);
 }
 
     
@@ -322,12 +322,8 @@
     <!-- Curso 1 -->
     <a href="curso1.html"  target="_blank" class="course-card">
       <img src="/img/220_01.png" alt="Curso 1">
-      <div class="curso-rating">
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9734;</span>
+ <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
       <h3>Manos de Seda: Tratamiento para rejuvenecer las manos</h3>Belleza
       <p>Aprende desde cero</p>
@@ -336,48 +332,49 @@
     <!-- Curso 2 -->
     <a href="curso2.html" class="course-card">
       <img src="/img/220_02.png" alt="Curso 2">
-      <div class="curso-rating">
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9734;</span>
+<div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-      <h3>Curso 2</h3>
+      <h3>Aprende y practica Yoga facial desde cero </h3>
       <p>Domina el tema rápido</p>
     </a>
 
     <!-- Curso 3 -->
     <a href="curso3.html" class="course-card">
       <img src="/img/220_03.png" alt="Curso 3">
-      <div class="curso-rating">
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9733;</span>
-  <span class="estrella">&#9734;</span>
+  <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-      <h3>Curso 3</h3>
+      <h3>💅🏻DE CERO A EXPERTA EN UÑAS POLYGEL</h3>
       <p>Con acceso de por vida</p>
     </a>
 
     <!-- Curso 4 -->
     <a href="curso4.html" class="course-card">
       <img src="/img/220_04.png" alt="Curso 4">
-      <h3>Curso 4</h3>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Yoga Facial con Aromaterapia</h3>
       <p>Incluye certificado</p>
     </a>
 
     <!-- Curso 5 -->
     <a href="curso5.html" class="course-card">
       <img src="/img/220_05.png" alt="Curso 5">
-      <h3>Curso 5</h3>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Inicia tu Negocio de Skincare</h3>
       <p>Acceso a comunidad privada</p>
     </a>
 
     <!-- Curso 6 -->
     <a href="curso6.html" class="course-card">
       <img src="https://via.placeholder.com/300x180" alt="Curso 6">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
       <h3>Curso 6</h3>
       <p>Actualizaciones constantes</p>
     </a>
@@ -385,6 +382,9 @@
     <!-- Curso 7 -->
     <a href="curso7.html" class="course-card">
       <img src="https://via.placeholder.com/300x180" alt="Curso 7">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
       <h3>Curso 7</h3>
       <p>Para todos los niveles</p>
     </a>
@@ -392,6 +392,9 @@
     <!-- Curso 8 -->
     <a href="curso8.html" class="course-card">
       <img src="https://via.placeholder.com/300x180" alt="Curso 8">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
       <h3>Curso 8</h3>
       <p>Con soporte personalizado</p>
     </a>
@@ -399,6 +402,9 @@
     <!-- Curso 9 -->
     <a href="curso9.html" class="course-card">
       <img src="https://via.placeholder.com/300x180" alt="Curso 9">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
       <h3>Curso 9</h3>
       <p>Gana dinero con Hotmart</p>
     </a>
@@ -470,6 +476,20 @@ function mostrarVentaSimulada() {
 }
 
 setInterval(mostrarVentaSimulada, 15000); // aparece cada 15 segundos
+</script>
+
+<script>
+  document.querySelectorAll('.curso-rating').forEach(el => {
+    const rating = parseInt(el.dataset.rating);
+    el.innerHTML = '';
+
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement('span');
+      star.classList.add('estrella');
+      star.innerHTML = i <= rating ? '&#9733;' : '&#9734;';
+      el.appendChild(star);
+    }
+  });
 </script>
 
 </body>
