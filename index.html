@@ -321,13 +321,13 @@
 </div>
 
 <script>
+<script>
 const nombres = [
   "Lucía R.", "José M.", "Daniela P.", "Carlos T.", "Valeria N.",
   "Mateo G.", "Ana L.", "Santiago R.", "Camila S.", "Andrés Z."
 ];
 
 const paises = ["México", "Perú", "Argentina", "Chile", "Colombia"];
-
 const tiempos = ["hace 2 minutos", "hace 5 minutos", "hace 10 minutos", "justo ahora", "hace 1 minuto"];
 
 function mostrarVentaSimulada() {
@@ -343,11 +343,16 @@ function mostrarVentaSimulada() {
 
   setTimeout(() => {
     popup.classList.remove("show");
-  }, 5000); // dura 5 segundos visible
+  }, 5000);
 }
 
-setInterval(mostrarVentaSimulada, 15000); // aparece cada 15 segundos
+// Mostrar uno cada 15 segundos
+setInterval(mostrarVentaSimulada, 15000);
+
+// Mostrar el primero apenas cargue la página
+setTimeout(mostrarVentaSimulada, 3000);
 </script>
+
 
 </body>
 </html>
