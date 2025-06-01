@@ -103,8 +103,8 @@
 }
 
 .curso-card img {
-  width: 300px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -259,6 +259,23 @@
   margin: 0;
 }
 
+.curso-rating {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.estrella {
+  color: #fbbc04;
+  font-size: 1.1rem;
+  margin: 0 1px;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.curso-card:hover .estrella {
+  transform: scale(1.2);
+  text-shadow: 0 0 6px rgba(255, 193, 7, 0.7);
+}
+
     
   </style>
 </head>
@@ -304,35 +321,56 @@
   <div class="course-grid">
     <!-- Curso 1 -->
     <a href="curso1.html"  target="_blank" class="course-card">
-      <img src="/img/001foto.png" alt="Curso 1">
-      <h3>Curso 1</h3>Manos de Seda: Tratamiento para rejuvenecer las manos
+      <img src="/img/220_01.png" alt="Curso 1">
+      <div class="curso-rating">
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9734;</span>
+</div>
+      <h3>Manos de Seda: Tratamiento para rejuvenecer las manos</h3>Belleza
       <p>Aprende desde cero</p>
     </a>
 
     <!-- Curso 2 -->
     <a href="curso2.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 2">
+      <img src="/img/220_02.png" alt="Curso 2">
+      <div class="curso-rating">
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9734;</span>
+</div>
       <h3>Curso 2</h3>
       <p>Domina el tema rápido</p>
     </a>
 
     <!-- Curso 3 -->
     <a href="curso3.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 3">
+      <img src="/img/220_03.png" alt="Curso 3">
+      <div class="curso-rating">
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9733;</span>
+  <span class="estrella">&#9734;</span>
+</div>
       <h3>Curso 3</h3>
       <p>Con acceso de por vida</p>
     </a>
 
     <!-- Curso 4 -->
     <a href="curso4.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 4">
+      <img src="/img/220_04.png" alt="Curso 4">
       <h3>Curso 4</h3>
       <p>Incluye certificado</p>
     </a>
 
     <!-- Curso 5 -->
     <a href="curso5.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 5">
+      <img src="/img/220_05.png" alt="Curso 5">
       <h3>Curso 5</h3>
       <p>Acceso a comunidad privada</p>
     </a>
