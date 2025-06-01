@@ -6,6 +6,68 @@
   <title>Tu Web de Cursos</title>
   <style>
   
+  .catalogo-cursos {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.curso-card {
+  background-color: #f0fbff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.curso-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.curso-card img {
+  width: 340px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.curso-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #00bfff;
+}
+
+.curso-card p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsivo para móvil */
+@media screen and (max-width: 500px) {
+  .curso-card img {
+    width: 100%;
+    height: auto;
+  }
+}
   .course-section {
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -201,7 +263,7 @@
   <section class="slideshow-container">
     <!-- Cambia las rutas de las imágenes abajo -->
     <div class="slide"><img src="https://i.imgur.com/zqlUlrM.jpeg" alt="Curso 1"></div>
-    <div class="slide"><img src="/img/SLIDE 2  .mp4" alt="Curso 2"></div>
+    <div class="slide"><img src="/img/SLIDE 2  .png" alt="Curso 2"></div>
     <div class="slide"><img src="ruta-imagen-3.jpg" alt="Curso 3"></div>
     <div class="slide"><img src="ruta-imagen-4.jpg" alt="Curso 4"></div>
     <div class="slide"><img src="ruta-imagen-5.jpg" alt="Curso 5"></div>
@@ -224,63 +286,63 @@
   <div class="course-grid">
     <!-- Curso 1 -->
     <a href="curso1.html"  target="_blank" class="course-card">
-      <img src="/img/foto 001.png" alt="Curso 1">
+      <img src="/img/foto01.png" alt="Curso 1">
       <h3>Curso 1</h3>Manos de Seda: Tratamiento para rejuvenecer las manos
       <p>Aprende desde cero</p>
     </a>
 
     <!-- Curso 2 -->
     <a href="curso2.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 2">
+      <img src="/img/foto01.png" alt="Curso 2">
       <h3>Curso 2</h3>
       <p>Domina el tema rápido</p>
     </a>
 
     <!-- Curso 3 -->
     <a href="curso3.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 3">
+      <img src="/img/foto01.png" alt="Curso 3">
       <h3>Curso 3</h3>
       <p>Con acceso de por vida</p>
     </a>
 
     <!-- Curso 4 -->
     <a href="curso4.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 4">
+      <img src="/img/foto01.png" alt="Curso 4">
       <h3>Curso 4</h3>
       <p>Incluye certificado</p>
     </a>
 
     <!-- Curso 5 -->
     <a href="curso5.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 5">
+      <img src="/img/foto01.png" alt="Curso 5">
       <h3>Curso 5</h3>
       <p>Acceso a comunidad privada</p>
     </a>
 
     <!-- Curso 6 -->
     <a href="curso6.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 6">
+      <img src="/img/foto01.png" alt="Curso 6">
       <h3>Curso 6</h3>
       <p>Actualizaciones constantes</p>
     </a>
 
     <!-- Curso 7 -->
     <a href="curso7.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 7">
+      <img src="/img/foto01.png" alt="Curso 7">
       <h3>Curso 7</h3>
       <p>Para todos los niveles</p>
     </a>
 
     <!-- Curso 8 -->
     <a href="curso8.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 8">
+      <img src="/img/foto01.png" alt="Curso 8">
       <h3>Curso 8</h3>
       <p>Con soporte personalizado</p>
     </a>
 
     <!-- Curso 9 -->
     <a href="curso9.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 9">
+      <img src="/img/foto01.png" alt="Curso 9">
       <h3>Curso 9</h3>
       <p>Gana dinero con Hotmart</p>
     </a>
