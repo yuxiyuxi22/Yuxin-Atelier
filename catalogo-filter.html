@@ -1,0 +1,130 @@
+
+<!-- Catálogo con Filtro + Botón Ver Más - Adaptado -->
+
+<section class="catalogo-cursos" style="padding: 3rem 1rem;">
+  <h2 style="text-align:center; color:#00bfff; font-size:2rem;">Catálogo de Cursos</h2>
+
+  <div class="filtros" style="text-align:center; margin-bottom: 2rem;">
+    <button class="filter-btn active" data-category="todos">Todos</button>
+    <button class="filter-btn" data-category="belleza">Belleza 💅</button>
+    <button class="filter-btn" data-category="marketing">Marketing 📈</button>
+    <button class="filter-btn" data-category="negocios">Negocios 💼</button>
+    <button class="filter-btn" data-category="espiritualidad">Espiritualidad 🧘‍♀️</button>
+    <button class="filter-btn" data-category="idiomas">Idiomas 🌎</button>
+    <button class="filter-btn" data-category="desarrollo">Desarrollo 🚀</button>
+  </div>
+
+  <div class="grid-cursos" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:2rem;">
+    <!-- Curso Cards -->
+    <div class="curso-card belleza">
+      <img src="https://via.placeholder.com/300x300?text=Belleza1" alt="Curso Belleza 1" />
+      <h3>Curso Belleza 1</h3>
+    </div>
+    <div class="curso-card belleza">
+      <img src="https://via.placeholder.com/300x300?text=Belleza2" alt="Curso Belleza 2" />
+      <h3>Curso Belleza 2</h3>
+    </div>
+    <div class="curso-card marketing">
+      <img src="https://via.placeholder.com/300x300?text=Marketing1" alt="Curso Marketing 1" />
+      <h3>Curso Marketing 1</h3>
+    </div>
+    <div class="curso-card negocios">
+      <img src="https://via.placeholder.com/300x300?text=Negocios1" alt="Curso Negocios 1" />
+      <h3>Curso Negocios 1</h3>
+    </div>
+    <div class="curso-card espiritualidad">
+      <img src="https://via.placeholder.com/300x300?text=Espiritualidad1" alt="Curso Espiritualidad 1" />
+      <h3>Curso Espiritualidad 1</h3>
+    </div>
+    <div class="curso-card idiomas">
+      <img src="https://via.placeholder.com/300x300?text=Idiomas1" alt="Curso Idiomas 1" />
+      <h3>Curso Idiomas 1</h3>
+    </div>
+    <div class="curso-card desarrollo hidden">
+      <img src="https://via.placeholder.com/300x300?text=Desarrollo1" alt="Curso Desarrollo 1" />
+      <h3>Curso Desarrollo 1</h3>
+    </div>
+    <div class="curso-card belleza hidden">
+      <img src="https://via.placeholder.com/300x300?text=Belleza3" alt="Curso Belleza 3" />
+      <h3>Curso Belleza 3</h3>
+    </div>
+    <div class="curso-card marketing hidden">
+      <img src="https://via.placeholder.com/300x300?text=Marketing2" alt="Curso Marketing 2" />
+      <h3>Curso Marketing 2</h3>
+    </div>
+  </div>
+
+  
+</section>
+
+<style>
+  .filter-btn {
+    background: transparent;
+    color: #333;
+    border: 2px solid #00bfff;
+    padding: 8px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .filter-btn:hover {
+    background-color: #00bfff;
+    color: white;
+  }
+  .filter-btn.active {
+    background-color: #00bfff;
+    color: white;
+    border-color: #00bfff;
+  }
+  .btn-ver-mas {
+    display: block;
+    margin: 2rem auto;
+    background: #00bfff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-ver-mas:hover {
+    background: #00a6d4;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.curso-card');
+    const verMasBtn = document.getElementById('ver-mas');
+
+    let expanded = false;
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        const category = btn.dataset.category;
+
+        cards.forEach((card, i) => {
+          const match = card.classList.contains(category) || category === 'todos';
+          const limit = i < 6 || expanded;
+          card.style.display = match && limit ? 'block' : 'none';
+        });
+      });
+    });
+
+    verMasBtn.addEventListener('click', () => {
+      expanded = true;
+      cards.forEach(card => card.classList.remove('hidden'));
+      verMasBtn.style.display = 'none';
+    });
+  });
+</script>

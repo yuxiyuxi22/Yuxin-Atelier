@@ -125,11 +125,11 @@
 }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fffafc, #ffe4f0, #cceeff);
+  color: #333;
+}
 
     /* Navbar */
     .navbar {
@@ -277,6 +277,22 @@
 }
 
     
+.btn-ver-mas {
+  display: block;
+  margin: 2rem auto;
+  background: #00bfff;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-ver-mas:hover {
+  background: #00a6d4;
+}
   </style>
 </head>
 <body>
@@ -332,7 +348,7 @@
     <!-- Curso 2 -->
     <a href="curso2.html" class="course-card">
       <img src="/img/220_02.png" alt="Curso 2">
-<div class="curso-rating" data-rating="4">
+<div class="curso-rating" data-rating="5">
   <!-- estrellas se llenarán automáticamente -->
 </div>
       <h3>Aprende y practica Yoga facial desde cero </h3>
@@ -342,7 +358,7 @@
     <!-- Curso 3 -->
     <a href="curso3.html" class="course-card">
       <img src="/img/220_03.png" alt="Curso 3">
-  <div class="curso-rating" data-rating="4">
+  <div class="curso-rating" data-rating="5">
   <!-- estrellas se llenarán automáticamente -->
 </div>
       <h3>💅🏻DE CERO A EXPERTA EN UÑAS POLYGEL</h3>
@@ -352,7 +368,7 @@
     <!-- Curso 4 -->
     <a href="curso4.html" class="course-card">
       <img src="/img/220_04.png" alt="Curso 4">
-       <div class="curso-rating" data-rating="4">
+       <div class="curso-rating" data-rating="5">
   <!-- estrellas se llenarán automáticamente -->
 </div>
       <h3>Yoga Facial con Aromaterapia</h3>
@@ -379,37 +395,13 @@
       <p>Actualizaciones constantes</p>
     </a>
 
-    <!-- Curso 7 -->
-    <a href="curso7.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 7">
-       <div class="curso-rating" data-rating="4">
-  <!-- estrellas se llenarán automáticamente -->
-</div>
-      <h3>Curso 7</h3>
-      <p>Para todos los niveles</p>
-    </a>
-
-    <!-- Curso 8 -->
-    <a href="curso8.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 8">
-       <div class="curso-rating" data-rating="4">
-  <!-- estrellas se llenarán automáticamente -->
-</div>
-      <h3>Curso 8</h3>
-      <p>Con soporte personalizado</p>
-    </a>
-
-    <!-- Curso 9 -->
-    <a href="curso9.html" class="course-card">
-      <img src="https://via.placeholder.com/300x180" alt="Curso 9">
-       <div class="curso-rating" data-rating="4">
-  <!-- estrellas se llenarán automáticamente -->
-</div>
-      <h3>Curso 9</h3>
-      <p>Gana dinero con Hotmart</p>
-    </a>
-  </div>
 </section>
+<!-- Boton ver más -->
+<button onclick="window.open('catalogo-filter.html', '_blank')" class="btn-ver-mas">
+  Ver más cursos
+</button>
+
+
 
 
   <script>
