@@ -18,6 +18,24 @@
       color: #00bfff;
       margin-bottom: 2rem;
     }
+
+   .filtros-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.filtros-scroll::-webkit-scrollbar {
+  display: none;
+}
+.filtros-scroll {
+  -webkit-overflow-scrolling: touch;
+  padding-inline: 1rem;
+}
     .filtros {
       text-align: center;
       margin-bottom: 2rem;
@@ -86,8 +104,11 @@
   <div class="filtros">
     <button class="filter-btn active" data-category="todos">Todos</button>
     <button class="filter-btn" data-category="belleza">Belleza 💅</button>
-    <button class="filter-btn" data-category="marketing">Marketing 📈</button>
+    <button class="filter-btn" data-category="idiomas">Idiomas 🌎</button>
     <button class="filter-btn" data-category="negocios">Negocios 💼</button>
+    <button class="filter-btn" data-category="salud">Salud 🥗</button>
+    <button class="filter-btn" data-category="espiritualidad">Espiritualidad 🧘‍♀️</button>
+    <button class="filter-btn" data-category="desarrollo personal">Desarrollo Personal 🧘‍♀️</button>
   </div>
 
   <div class="grid-cursos">
@@ -95,7 +116,7 @@
       <img src="https://via.placeholder.com/300x300?text=Belleza1" alt="Curso Belleza 1"/>
       <h3>Curso Belleza</h3>
     </div>
-    <div class="curso-card marketing">
+    <div class="curso-card idiomas">
       <img src="https://via.placeholder.com/300x300?text=Marketing1" alt="Curso Marketing 1"/>
       <h3>Curso Marketing</h3>
     </div>
