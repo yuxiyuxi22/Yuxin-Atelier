@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Testimonios Slider</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fffafc;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #ff6f91;
+      margin-bottom: 2rem;
+    }
+
+    .swiper {
+      width: 100%;
+      max-width: 900px;
+      padding: 2rem 0;
+      margin: auto;
+    }
+
+    .swiper-slide {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .testimonial-name {
+      font-weight: bold;
+    }
+
+    .testimonial-stars {
+      color: #ffcc00;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h2>Lo que dicen nuestras alumnas 💖</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <div class="testimonial-header">
+          <img src="img/avatar1.jpg" alt="Valeria G.">
+          <div>
+            <div class="testimonial-name">Valeria G.</div>
+            <div style="font-size: 0.9rem; color: #888;">México 🇲🇽</div>
+          </div>
+        </div>
+        <p>“No sabía nada de uñas y ahora tengo clientas fijas. El curso es súper claro, fácil de seguir y muy completo.”</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-header">
+          <img src="img/avatar2.jpg" alt="Camila R.">
+          <div>
+            <div class="testimonial-name">Camila R.</div>
+            <div style="font-size: 0.9rem; color: #888;">Chile 🇨🇱</div>
+          </div>
+        </div>
+        <p>“Gracias a este curso descubrí un talento que no sabía que tenía. ¡Ya empecé a ofrecer servicios!”</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="testimonial-header">
+          <img src="img/avatar3.jpg" alt="Daniela S.">
+          <div>
+            <div class="testimonial-name">Daniela S.</div>
+            <div style="font-size: 0.9rem; color: #888;">Perú 🇵🇪</div>
+          </div>
+        </div>
+        <p>“La explicación es súper detallada. Me encantó que puedo aprender a mi ritmo y repetir las clases.”</p>
+        <div class="testimonial-stars">★★★★★</div>
+      </div>
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- 💬 Sección Testimonios Profesionales -->
+<section style="background: #fffafc; padding: 4rem 1rem; text-align: center;">
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #ff6f91; margin-bottom: 2rem;">
+    Lo que dicen nuestras alumnas 💖
+  </h2>
+  <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 1100px; margin: auto;">
+
+    <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08); text-align: left;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="img/avatar1.jpg" alt="Avatar" style="width: 60px; height: 60px; border-radius: 50%;">
+        <div>
+          <strong>Valeria G.</strong><br><span style="font-size: 0.9rem; color: #888;">México 🇲🇽</span>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;">“No sabía nada de uñas y ahora tengo clientas fijas. El curso es súper claro, fácil de seguir y muy completo.”</p>
+      <p style="color: #ffcc00;">★★★★★</p>
+    </div>
+
+    <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08); text-align: left;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="img/avatar2.jpg" alt="Avatar" style="width: 60px; height: 60px; border-radius: 50%;">
+        <div>
+          <strong>Camila R.</strong><br><span style="font-size: 0.9rem; color: #888;">Chile 🇨🇱</span>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;">“Gracias a este curso descubrí un talento que no sabía que tenía. ¡Ya empecé a ofrecer servicios!”</p>
+      <p style="color: #ffcc00;">★★★★★</p>
+    </div>
+
+    <div style="background: white; border-radius: 16px; padding: 2rem; box-shadow: 0 4px 16px rgba(0,0,0,0.08); text-align: left;">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="img/avatar3.jpg" alt="Avatar" style="width: 60px; height: 60px; border-radius: 50%;">
+        <div>
+          <strong>Daniela S.</strong><br><span style="font-size: 0.9rem; color: #888;">Perú 🇵🇪</span>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;">“La explicación es súper detallada. Me encantó que puedo aprender a mi ritmo y repetir las clases.”</p>
+      <p style="color: #ffcc00;">★★★★★</p>
+    </div>
+
+  </div>
+</section>
