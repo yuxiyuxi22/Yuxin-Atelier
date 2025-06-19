@@ -1,530 +1,530 @@
-<!DOCTYPE-html>
-<html-lang="es">
+!DOCTYPE html>
+<html lang="es">
 <head>
---<meta-charset="UTF-8">
---<meta-name="viewport"-content="width=device-width,-initial-scale=1.0">
---<title>Tu-Web-de-Cursos</title>
---<style>
---
---.catalogo-cursos-{
---margin-top:-3rem;
---padding:-2rem;
---background-color:-#fff;
---border-radius:-16px;
---box-shadow:-0-4px-15px-rgba(0,0,0,0.05);
---text-align:-center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Web de Cursos</title>
+  <style>
+  
+  .catalogo-cursos {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
 }
 
-.catalogo-{
---display:-grid;
---grid-template-columns:-repeat(4,-1fr);-/*-4-por-fila-en-desktop-*/
---gap:-2rem;
---margin-top:-2rem;
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por fila en desktop */
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.curso-card-{
---background-color:-#f0fbff;
---padding:-1rem;
---border-radius:-12px;
---text-align:-center;
---text-decoration:-none;
---color:-#333;
---box-shadow:-0-4px-12px-rgba(0,0,0,0.05);
---transition:-transform-0.2s-ease;
+.curso-card {
+  background-color: #f0fbff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
-.curso-card:hover-{
---transform:-scale(1.03);
---box-shadow:-0-6px-16px-rgba(0,0,0,0.08);
+.curso-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-.curso-card-img-{
---height:-280px;
---object-fit:-cover;
---border-radius:-8px;
---display:-block;
---margin:-0-auto-1rem;
---image-rendering:-auto;
---width:-100%;
---height:-280px;
---object-fit:-cover;
---border-radius:-8px;
---margin-bottom:-1rem;
---display:-block;
---margin-left:-auto;
---margin-right:-auto;
---image-rendering:-auto;
---image-rendering:-crisp-edges;
+.curso-card img {
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem;
+  image-rendering: auto;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
 }
 
-.curso-card-h3-{
---margin:-0;
---font-size:-1.1rem;
---color:-#00bfff;
+.curso-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #00bfff;
 }
 
-.curso-card-p-{
---margin-top:-6px;
---font-size:-0.95rem;
---color:-#555;
+.curso-card p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 
-.catalogo-{
---display:-grid;
---grid-template-columns:-repeat(4,-1fr);
---gap:-2rem;
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
 }
 
-@media-(max-width:-1024px)-{
---.catalogo-{
-----grid-template-columns:-repeat(2,-1fr);
---}
+@media (max-width: 1024px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media-(max-width:-600px)-{
---.catalogo-{
-----grid-template-columns:-1fr;
---}
+@media (max-width: 600px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
 }
---.course-section-{
---padding:-3rem-2rem;
---max-width:-1200px;
---margin:-0-auto;
---text-align:-center;
-}
-
-.course-section-h2-{
---font-size:-2rem;
---margin-bottom:-2rem;
---color:-#222;
+  .course-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.course-grid--{
---display:-grid;
---grid-template-columns:-repeat(4,-1fr);-/*-4-por-fila-en-desktop-*/
---gap:-2rem;
---margin-top:-2rem;
+.course-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
-.course-card-{
---background-color:-#fff;
---border-radius:-16px;
---box-shadow:-0-5px-15px-rgba(0,0,0,0.05);
---text-decoration:-none;
---color:-#333;
---transition:-transform-0.2s-ease,-box-shadow-0.2s-ease;
---overflow:-hidden;
+.course-grid  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por fila en desktop */
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.course-card:hover-{
---transform:-translateY(-5px);
---box-shadow:-0-10px-20px-rgba(0,0,0,0.1);
+.course-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
-.course-card-h3-{
---font-size:-1.2rem;
---margin:-1rem-0-0.5rem;
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.course-card-p-{
---font-size:-0.95rem;
---margin-bottom:-1rem;
---color:-#666;
+.course-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
 }
 
-----body-{
---margin:-0;
---font-family:-'Segoe-UI',-sans-serif;
---background:-linear-gradient(to-bottom,-#fffafc,-#ffe4f0,-#cceeff);
---color:-#333;
+.course-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #666;
 }
 
-----/*-Navbar-*/
-----.navbar-{
-------display:-flex;
-------justify-content:-space-between;
-------align-items:-center;
-------background-color:-#fff;
-------padding:-1rem-2rem;
-------box-shadow:-0-2px-5px-rgba(0,0,0,0.05);
-----}
-
-----.logo-{
-------width:-120px;
-------height:-auto;
-----}
-
-----.nav-links-{
-------display:-flex;
-------gap:-2rem;
-----}
-
-----.nav-links-a-{
-------text-decoration:-none;
-------color:-#333;
-------padding:-8px-16px;
-------border-radius:-999px;
-------transition:-all-0.3s-ease;
-----}
-
-----.nav-links-a:hover,-.nav-links-a.active-{
-------background-color:-#aee9f8;
-------color:-#000;
-----}
-
-----/*-Slideshow-*/
-----.slideshow-container-{
-------max-width:-1000px;
-------margin:-3rem-auto;
-------position:-relative;
-------border-radius:-20px;
-------overflow:-hidden;
-------box-shadow:-0-0-15px-rgba(0,0,0,0.1);
-----}
-
-----.slide-{
-------display:-none;
-------width:-100%;
-----}
-
-----.slide-img-{
-------width:-100%;
-------height:-auto;
-------border-radius:-20px;
-----}
-
-----.dots-{
-------text-align:-center;
-------margin-top:-1rem;
-----}
-
-----.dot-{
-------height:-12px;
-------width:-12px;
-------margin:-0-5px;
-------background-color:-#bbb;
-------border-radius:-50%;
-------display:-inline-block;
-------transition:-background-color-0.3s-ease;
-----}
-
-----.active-dot-{
-------background-color:-#00bfff;
-------
-------@media-(max-width:-768px)-{
---.nav-links-{
-----flex-direction:-column;
-----gap:-1rem;
-----align-items:-flex-start;
---}
-
---.navbar-{
-----flex-direction:-column;
-----align-items:-flex-start;
---}
-}
-----}
-
-----.venta-simulada-{
---position:-fixed;
---bottom:-20px;
---left:-20px;
---background-color:-#ffffff;
---color:-#333;
---padding:-12px-18px;
---border-radius:-12px;
---box-shadow:-0-4px-15px-rgba(0,0,0,0.1);
---font-size:-0.9rem;
---display:-flex;
---align-items:-center;
---gap:-10px;
---z-index:-9999;
---opacity:-0;
---transform:-translateY(20px);
---transition:-opacity-0.4s-ease,-transform-0.4s-ease;
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fffafc, #ffe4f0, #cceeff);
+  color: #333;
 }
 
-.venta-simulada.show-{
---opacity:-1;
---transform:-translateY(0);
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      background-color: #aee9f8;
+      color: #000;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .active-dot {
+      background-color: #00bfff;
+      
+      @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
--.img-wrapper-{
---width:-100%;
---aspect-ratio:-1-/-1;
---border-radius:-0;-/*-sin-curvas-si-no-quieres-*/
---overflow:-hidden;
---background-color:-transparent;-/*-asegura-sin-fondo-blanco-*/
---padding:-0;
---margin:-0;
+    }
+
+    .venta-simulada {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-.img-wrapper-img-{
---width:-100%;
---height:-100%;
---object-fit:-cover;
---display:-block;
---border:-none;
---margin:-0;
+.venta-simulada.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+ .img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 0; /* sin curvas si no quieres */
+  overflow: hidden;
+  background-color: transparent; /* asegura sin fondo blanco */
+  padding: 0;
+  margin: 0;
 }
 
-.curso-rating-{
---margin-bottom:-0.5rem;
---text-align:-center;
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  margin: 0;
 }
 
-.estrella-{
---color:-#fbbc04;
---font-size:-1.1rem;
---margin:-0-1px;
---transition:-transform-0.3s-ease,-filter-0.3s-ease;
+.curso-rating {
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
-.curso-card:hover-.estrella-{
---transform:-scale(1.2);
---filter:-drop-shadow(0-0-4px-#fbbc04);
+.estrella {
+  color: #fbbc04;
+  font-size: 1.1rem;
+  margin: 0 1px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-----
-.btn-ver-mas-{
---display:-block;
---margin:-2rem-auto;
---background:-#00bfff;
---color:-white;
---padding:-1rem-2rem;
---border:-none;
---border-radius:-30px;
---font-weight:-bold;
---font-size:-1rem;
---cursor:-pointer;
---transition:-background-0.3s-ease;
+.curso-card:hover .estrella {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px #fbbc04);
 }
-.btn-ver-mas:hover-{
---background:-#00a6d4;
+
+    
+.btn-ver-mas {
+  display: block;
+  margin: 2rem auto;
+  background: #00bfff;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
---
-@media-(max-width:-1024px)-{
---.course-grid-{
-----grid-template-columns:-repeat(2,-1fr);
---}
+.btn-ver-mas:hover {
+  background: #00a6d4;
 }
-@media-(max-width:-600px)-{
---.course-grid-{
-----grid-template-columns:-1fr;
---}
+  
+@media (max-width: 1024px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
 </head>
 <body>
 
---<!---NAVBAR--->
---<header-class="navbar">
-----<!---Pon-aquí-la-URL-de-tu-logo--->
-----<img-src="https://i.imgur.com/8AAqzLu.jpeg"-alt="Logo"-class="logo">
-----<nav-class="nav-links">
-------<a-href="quienes-somos-rosa.html">¿Quiénes-somos?</a>
-------<a-href="catalogo-filter.html">Cursos</a>
-------<a-href="/testimonios-slider.html">Testimonios</a>
-------<a-href="contact.html">Contacto</a>
-------<a-href="#blog">Blog</a>
-----</nav>
---</header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <!-- Pon aquí la URL de tu logo -->
+    <img src="https://i.imgur.com/8AAqzLu.jpeg" alt="Logo" class="logo">
+    <nav class="nav-links">
+      <a href="quienes-somos-rosa.html">¿Quiénes somos?</a>
+      <a href="catalogo-filter.html">Cursos</a>
+      <a href="/testimonios-slider.html">Testimonios</a>
+      <a href="contact.html">Contacto</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
 
---<!---SLIDESHOW--->
---<section-class="slideshow-container">
-----<!---Cambia-las-rutas-de-las-imágenes-abajo--->
-----<div-class="slide"><img-src="https://i.imgur.com/zqlUlrM.jpeg"-alt="Curso-1"></div>
-----<div-class="slide"><img-src="/img/SLIDE-2--.png"-alt="Curso-2"></div>
-----<div-class="slide"><img-src="ruta-imagen-3.jpg"-alt="Curso-3"></div>
-----<div-class="slide"><img-src="ruta-imagen-4.jpg"-alt="Curso-4"></div>
-----<div-class="slide"><img-src="ruta-imagen-5.jpg"-alt="Curso-5"></div>
-----<div-class="slide"><img-src="ruta-imagen-6.jpg"-alt="Curso-6"></div>
-----<div-class="slide"><img-src="ruta-imagen-7.jpg"-alt="Curso-7"></div>
+  <!-- SLIDESHOW -->
+  <section class="slideshow-container">
+    <!-- Cambia las rutas de las imágenes abajo -->
+    <div class="slide"><img src="https://i.imgur.com/zqlUlrM.jpeg" alt="Curso 1"></div>
+    <div class="slide"><img src="/img/SLIDE 2  .png" alt="Curso 2"></div>
+    <div class="slide"><img src="ruta-imagen-3.jpg" alt="Curso 3"></div>
+    <div class="slide"><img src="ruta-imagen-4.jpg" alt="Curso 4"></div>
+    <div class="slide"><img src="ruta-imagen-5.jpg" alt="Curso 5"></div>
+    <div class="slide"><img src="ruta-imagen-6.jpg" alt="Curso 6"></div>
+    <div class="slide"><img src="ruta-imagen-7.jpg" alt="Curso 7"></div>
 
-----<div-class="dots">
-------<span-class="dot"-onclick="currentSlide(1)"></span>
-------<span-class="dot"-onclick="currentSlide(2)"></span>
-------<span-class="dot"-onclick="currentSlide(3)"></span>
-------<span-class="dot"-onclick="currentSlide(4)"></span>
-------<span-class="dot"-onclick="currentSlide(5)"></span>
-------<span-class="dot"-onclick="currentSlide(6)"></span>
-------<span-class="dot"-onclick="currentSlide(7)"></span>
-----</div>
---</section>
---<!---CURSOS--->
-<section-id="cursos"-class="course-section">
---<h2>Nuestros-Cursos</h2>
---<div-class="course-grid">
-----<!---Curso-1--->
-----<a-href="curso1.html"--target="_blank"-class="course-card">
-------<img-src="/img/Post-Instagram-Curso-Presencial-Belleza-Moderno-Rosa-Negro.png"-alt="Curso-1">
--<div-class="curso-rating"-data-rating="4">
---<!---estrellas-se-llenarán-automáticamente--->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+  </section>
+  <!-- CURSOS -->
+<section id="cursos" class="course-section">
+  <h2>Nuestros Cursos</h2>
+  <div class="course-grid">
+    <!-- Curso 1 -->
+    <a href="curso1.html"  target="_blank" class="course-card">
+      <img src="/img/Post Instagram Curso Presencial Belleza Moderno Rosa Negro.png" alt="Curso 1">
+ <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Método-Lash-Art</h3>Belleza
-------<p>Aprende-desde-cero</p>
-----</a>
+      <h3>Método Lash Art</h3>Belleza
+      <p>Aprende desde cero</p>
+    </a>
 
-----<!---Curso-2--->
-----<a-href="curso2.html"-class="course-card">
-------<img-src="/img/Post-Instagram-Curso-Presencial-Belleza-Moderno-Rosa-Negro.webp"-alt="Curso-2">
-<div-class="curso-rating"-data-rating="5">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 2 -->
+    <a href="curso2.html" class="course-card">
+      <img src="/img/Post Instagram Curso Presencial Belleza Moderno Rosa Negro.webp" alt="Curso 2">
+<div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Aprende-y-practica-Yoga-facial-desde-cero-</h3>
-------<p>Domina-el-tema-rápido</p>
-----</a>
+      <h3>Aprende y practica Yoga facial desde cero </h3>
+      <p>Domina el tema rápido</p>
+    </a>
 
-----<!---Curso-3--->
-----<a-href="curso3.html"-class="course-card">
-------<img-src="/img/grid_01.png"-alt="Curso-3">
---<div-class="curso-rating"-data-rating="5">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 3 -->
+    <a href="curso3.html" class="course-card">
+      <img src="/img/grid_01.png" alt="Curso 3">
+  <div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>💅🏻DE-CERO-A-EXPERTA-EN-UÑAS-POLYGEL</h3>
-------<p>Con-acceso-de-por-vida</p>
-----</a>
+      <h3>💅🏻DE CERO A EXPERTA EN UÑAS POLYGEL</h3>
+      <p>Con acceso de por vida</p>
+    </a>
 
-----<!---Curso-4--->
-----<a-href="curso4.html"-class="course-card">
-------<img-src="/img/Post-Instagram-Curso-Presencial-Belleza-Moderno-Rosa-Negro.webp"-alt="Curso-4">
--------<div-class="curso-rating"-data-rating="5">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 4 -->
+    <a href="curso4.html" class="course-card">
+      <img src="/img/Post Instagram Curso Presencial Belleza Moderno Rosa Negro.webp" alt="Curso 4">
+       <div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Yoga-Facial-con-Aromaterapia</h3>
-------<p>Incluye-certificado</p>
-----</a>
+      <h3>Yoga Facial con Aromaterapia</h3>
+      <p>Incluye certificado</p>
+    </a>
 
-----<!---Curso-5--->
-----<a-href="curso5.html"-class="course-card">
-------<img-src="/img/grid_01.png"-alt="Curso-5">
--------<div-class="curso-rating"-data-rating="4">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 5 -->
+    <a href="curso5.html" class="course-card">
+      <img src="/img/grid_01.png" alt="Curso 5">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Inicia-tu-Negocio-de-Skincare</h3>
-------<p>Acceso-a-comunidad-privada</p>
-----</a>
+      <h3>Inicia tu Negocio de Skincare</h3>
+      <p>Acceso a comunidad privada</p>
+    </a>
 
-----<!---Curso-6--->
-----<a-href="curso6.html"-class="course-card">
-------<img-src="/img/guaiis.png"-alt="Curso-6">
--------<div-class="curso-rating"-data-rating="4">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 6 -->
+    <a href="curso6.html" class="course-card">
+      <img src="/img/guaiis.png" alt="Curso 6">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Curso-6</h3>
-------<p>Actualizaciones-constantes</p>
-----</a>
+      <h3>Curso 6</h3>
+      <p>Actualizaciones constantes</p>
+    </a>
 
------<!---Curso-7--->
-----<a-href="curso5.html"-class="course-card">
-------<img-src="/img/prueba-1.png"-alt="Curso-7">
--------<div-class="curso-rating"-data-rating="4">
---<!---estrellas-se-llenarán-automáticamente--->
+     <!-- Curso 7 -->
+    <a href="curso5.html" class="course-card">
+      <img src="/img/prueba 1.png" alt="Curso 7">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Inicia-tu-Negocio-de-Skincare</h3>
-------<p>Acceso-a-comunidad-privada</p>
-----</a>
+      <h3>Inicia tu Negocio de Skincare</h3>
+      <p>Acceso a comunidad privada</p>
+    </a>
 
-----<!---Curso-8--->
-----<a-href="curso6.html"-class="course-card">
-------<img-src="/img/guardaa.png"-alt="Curso-8">
--------<div-class="curso-rating"-data-rating="4">
---<!---estrellas-se-llenarán-automáticamente--->
+    <!-- Curso 8 -->
+    <a href="curso6.html" class="course-card">
+      <img src="/img/guardaa.png" alt="Curso 8">
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
 </div>
-------<h3>Curso-6</h3>
-------<p>Actualizaciones-constantes</p>
-----</a>
+      <h3>Curso 6</h3>
+      <p>Actualizaciones constantes</p>
+    </a>
 </div>
 
 
 </section>
-<!---Boton-ver-más--->
-<button-onclick="window.open('catalogo-filter.html',-'_blank')"-class="btn-ver-mas">
---Ver-más-cursos
+<!-- Boton ver más -->
+<button onclick="window.open('catalogo-filter.html', '_blank')" class="btn-ver-mas">
+  Ver más cursos
 </button>
 
 
 
 
---<script>
-----let-slideIndex-=-1;
-----document.addEventListener("DOMContentLoaded",-()-=>-showSlides(slideIndex));
+  <script>
+    let slideIndex = 1;
+    document.addEventListener("DOMContentLoaded", () => showSlides(slideIndex));
 
-----showSlides(slideIndex);
+    showSlides(slideIndex);
 
-----function-currentSlide(n)-{
-------showSlides(slideIndex-=-n);
-----}
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
 
-----function-showSlides(n)-{
-------let-slides-=-document.getElementsByClassName("slide");
-------let-dots-=-document.getElementsByClassName("dot");
-------if-(n->-slides.length)-{-slideIndex-=-1-}
-------if-(n-<-1)-{-slideIndex-=-slides.length-}
-------for-(let-i-=-0;-i-<-slides.length;-i++)-{
---------slides[i].style.display-=-"none";
-------}
-------for-(let-i-=-0;-i-<-dots.length;-i++)-{
---------dots[i].classList.remove("active-dot");
-------}
-------slides[slideIndex---1].style.display-=-"block";
-------dots[slideIndex---1].classList.add("active-dot");
-----}
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active-dot");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active-dot");
+    }
 
-----//-Optional-autoplay
-----setInterval(()-=>-{
-------slideIndex++;
-------showSlides(slideIndex);
-----},-5000);-//-Cambia-el-tiempo-si-quieres
---</script>
+    // Optional autoplay
+    setInterval(() => {
+      slideIndex++;
+      showSlides(slideIndex);
+    }, 5000); // Cambia el tiempo si quieres
+  </script>
 
-<div-class="venta-simulada"-id="venta-simulada">
---<i-class="fas-fa-check-circle"></i>
---<span-id="mensaje-venta">Lucía-R.-de-Colombia-se-unió-al-curso-hace-3-minutos</span>
+<div class="venta-simulada" id="venta-simulada">
+  <i class="fas fa-check-circle"></i>
+  <span id="mensaje-venta">Lucía R. de Colombia se unió al curso hace 3 minutos</span>
 </div>
 
 <script>
-const-nombres-=-[
---"Lucía-R.",-"José-M.",-"Daniela-P.",-"Carlos-T.",-"Valeria-N.",
---"Mateo-G.",-"Ana-L.",-"Santiago-R.",-"Camila-S.",-"Andrés-Z."
+const nombres = [
+  "Lucía R.", "José M.", "Daniela P.", "Carlos T.", "Valeria N.",
+  "Mateo G.", "Ana L.", "Santiago R.", "Camila S.", "Andrés Z."
 ];
 
-const-paises-=-["México",-"Perú",-"Argentina",-"Chile",-"Colombia"];
+const paises = ["México", "Perú", "Argentina", "Chile", "Colombia"];
 
-const-tiempos-=-["hace-2-minutos",-"hace-5-minutos",-"hace-10-minutos",-"justo-ahora",-"hace-1-minuto"];
+const tiempos = ["hace 2 minutos", "hace 5 minutos", "hace 10 minutos", "justo ahora", "hace 1 minuto"];
 
-function-mostrarVentaSimulada()-{
---const-nombre-=-nombres[Math.floor(Math.random()-*-nombres.length)];
---const-pais-=-paises[Math.floor(Math.random()-*-paises.length)];
---const-tiempo-=-tiempos[Math.floor(Math.random()-*-tiempos.length)];
+function mostrarVentaSimulada() {
+  const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+  const pais = paises[Math.floor(Math.random() * paises.length)];
+  const tiempo = tiempos[Math.floor(Math.random() * tiempos.length)];
 
---const-mensaje-=-`${nombre}-de-${pais}-se-unió-al-curso-${tiempo}`;
---document.getElementById("mensaje-venta").textContent-=-mensaje;
+  const mensaje = `${nombre} de ${pais} se unió al curso ${tiempo}`;
+  document.getElementById("mensaje-venta").textContent = mensaje;
 
---const-popup-=-document.getElementById("venta-simulada");
---popup.classList.add("show");
+  const popup = document.getElementById("venta-simulada");
+  popup.classList.add("show");
 
---setTimeout(()-=>-{
-----popup.classList.remove("show");
---},-5000);-//-dura-5-segundos-visible
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000); // dura 5 segundos visible
 }
 
-setInterval(mostrarVentaSimulada,-15000);-//-aparece-cada-15-segundos
+setInterval(mostrarVentaSimulada, 15000); // aparece cada 15 segundos
 </script>
 
 <script>
---document.querySelectorAll('.curso-rating').forEach(el-=>-{
-----const-rating-=-parseInt(el.dataset.rating);
-----el.innerHTML-=-'';
+  document.querySelectorAll('.curso-rating').forEach(el => {
+    const rating = parseInt(el.dataset.rating);
+    el.innerHTML = '';
 
-----for-(let-i-=-1;-i-<=-5;-i++)-{
-------const-star-=-document.createElement('span');
-------star.classList.add('estrella');
-------star.innerHTML-=-i-<=-rating-?-'&#9733;'-:-'&#9734;';
-------el.appendChild(star);
-----}
---});
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement('span');
+      star.classList.add('estrella');
+      star.innerHTML = i <= rating ? '&#9733;' : '&#9734;';
+      el.appendChild(star);
+    }
+  });
 </script>
 
 </body>
