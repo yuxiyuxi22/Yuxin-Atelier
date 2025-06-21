@@ -266,6 +266,22 @@
   filter: drop-shadow(0 0 4px #fbbc04);
 }
 
+.btn-mini-compra {
+  display: inline-block;
+  background: #00b894;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  margin: 0.4rem 0;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-mini-compra:hover {
+  background: #019875;
+}
     
 .btn-ver-mas {
   display: block;
@@ -356,15 +372,22 @@
   <h2>Nuestros Cursos</h2>
   <div class="course-grid">
     <!-- Curso 1 -->
+<a href="curso1.html" target="_blank" class="course-card">
+  <div class="img-wrapper">
+    <img src="/img/curso-post-hd.png" alt="Curso 1" loading="lazy">
+  </div>
 
-    <a href="curso1.html"  target="_blank" class="course-card">
-      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 1"  loading= "lazy">
-      </div>
- <div class="curso-rating" data-rating="4">
-  <!-- estrellas se llenarán automáticamente -->
-</div>
-      <h3>Método Lash Art</h3>Belleza
-      <p>Aprende desde cero</p>
+  <div class="curso-rating" data-rating="4">
+    <!-- estrellas se llenarán automáticamente -->
+  </div>
+
+  <h3>Método Lash Art</h3>
+  Belleza
+  <p>Aprende desde cero</p>
+
+  <!-- 🛒 Botón pequeño de compra -->
+  <a href="https://hotmart.com/tu-link-de-compra" class="btn-mini-compra" target="_blank">Comprar</a>
+</a>
     
 
     <!-- Curso 2 -->
