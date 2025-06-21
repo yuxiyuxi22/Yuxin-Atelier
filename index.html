@@ -19,7 +19,35 @@
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   text-align: center;
 }
+.card-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 
+.card-content .desc {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.btn, .btn-compra {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
 .catalogo {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -293,6 +321,10 @@
   filter: drop-shadow(0 0 4px #fbbc04);
 }
 
+.btn {
+  background: #ff6f91;
+  color: white;
+}
     
 .btn-ver-mas {
   display: block;
@@ -312,18 +344,8 @@
 }
 
 .btn-compra {
-  display: block;
-  width: 80%;
-  margin: 0.5rem auto 1rem;
-  padding: 0.6rem;
-  background: #ed7aae;
+  background: #00b894;
   color: white;
-  border: none;
-  border-radius: 30px;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
 }
 .btn-compra:hover {
   background: #019875;
