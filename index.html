@@ -70,17 +70,6 @@
   gap: 2rem;
 }
 
-@media (max-width: 1024px) {
-  .catalogo {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .catalogo {
-    grid-template-columns: 1fr;
-  }
-}
   .course-section {
   padding: 3rem 2rem;
   max-width: 1200px;
@@ -103,14 +92,11 @@
 
 .course-card {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-decoration: none;
   color: #333;
-  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
 
@@ -120,14 +106,14 @@
 }
 
 .course-card h3 {
-  font-size: 1.1rem;
-  margin: 0.5rem 0 0.2rem;
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .course-card p {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #666;
 }
 
     body {
@@ -279,25 +265,23 @@
   transform: scale(1.2);
   filter: drop-shadow(0 0 4px #fbbc04);
 }
-
- .btn-mini-compra {
+.btn-mini-compra {
   display: inline-block;
   background: #00b894;
   color: white;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
   font-size: 0.8rem;
   border-radius: 30px;
-  margin-top: 0.5rem;
+  margin: 0.4rem 0;
   font-weight: bold;
   text-decoration: none;
-  align-self: center;
   transition: background 0.3s ease;
 }
 
 .btn-mini-compra:hover {
   background: #019875;
 }
-
+    
 .btn-ver-mas {
   display: block;
   margin: 2rem auto;
@@ -387,46 +371,44 @@
   <h2>Nuestros Cursos</h2>
   <div class="course-grid">
     <!-- Curso 1 -->
-  <div class="course-card">
-    <a href="curso1.html" target="_blank">
-      <div class="img-wrapper">
-        <img src="img/curso-post-hd.png" alt="Curso 1" loading="lazy">
-      </div>
-      <div class="curso-rating" data-rating="4">★★★★☆</div>
-      <h3>Método Lash Art</h3>
-      <span class="categoria">Belleza</span>
-      <p class="desc">Aprende desde cero</p>
-    </a>
-    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+<a href="curso1.html" target="_blank" class="course-card">
+  <div class="img-wrapper">
+    <img src="/img/curso-post-hd.png" alt="Curso 1" loading="lazy">
   </div>
 
-  <!-- Curso 2 -->
-  <div class="course-card">
-    <a href="curso2.html" target="_blank">
-      <div class="img-wrapper">
-        <img src="img/curso-post-hd" alt="Curso 2" loading="lazy">
-      </div>
-      <div class="curso-rating" data-rating="5">★★★★★</div>
-      <h3>Polygel Profesional</h3>
-      <span class="categoria">Belleza</span>
-      <p class="desc">Técnica completa paso a paso</p>
-    </a>
-    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+  <div class="curso-rating" data-rating="4">
+    <!-- estrellas se llenarán automáticamente -->
   </div>
 
-  <!-- Curso 3 -->
-  <div class="course-card">
-    <a href="curso3.html" target="_blank">
-      <div class="img-wrapper">
-        <img src="img/curso-post-hd" alt="Curso 3" loading="lazy">
-      </div>
-      <div class="curso-rating" data-rating="3">★★★☆☆</div>
-      <h3>Manicura Rusa</h3>
-      <span class="categoria">Belleza</span>
-      <p class="desc">Domina la técnica y gana clientas</p>
+  <h3>Método Lash Art</h3>
+  Belleza
+  <p>Aprende desde cero</p>
+
+  <!-- 🛒 Botón pequeño de compra -->
+  <a href="https://hotmart.com/tu-link-de-compra" class="btn-mini-compra" target="_blank">Comprar</a>
+</a>
+    
+
+    <!-- Curso 2 -->
+    <a href="curso2.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 2"  loading= "lazy"></div>
+<div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Aprende y practica Yoga facial desde cero </h3>
+      <p>Domina el tema rápido</p>
     </a>
-    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
-  </div>
+
+    <!-- Curso 3 -->
+    <a href="curso3.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 3"  loading= "lazy"></div>
+  <div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>💅🏻DE CERO A EXPERTA EN UÑAS POLYGEL</h3>
+      <p>Con acceso de por vida</p>
+    </a>
+
     <!-- Curso 4 -->
     <a href="curso4.html" class="course-card">
       <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 4"  loading= "lazy"></div>
