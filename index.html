@@ -195,19 +195,13 @@
     .active-dot {
       background-color: #00bfff;
       
-      @media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
+  
   }
 
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-    }
 
     .venta-simulada {
   position: fixed;
@@ -265,22 +259,7 @@
   transform: scale(1.2);
   filter: drop-shadow(0 0 4px #fbbc04);
 }
-.btn-mini-compra {
-  display: inline-block;
-  background: #00b894;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.8rem;
-  border-radius: 30px;
-  margin: 0.4rem 0;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
 
-.btn-mini-compra:hover {
-  background: #019875;
-}
     
 .btn-ver-mas {
   display: block;
@@ -325,6 +304,23 @@
       object-fit: cover; /* recorta sin deformar */
       display: block;
     }
+    .btn-mini-compra {
+  display: inline-block;
+  background: #00b894;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  align-self: center;
+  transition: background 0.3s ease;
+}
+
+.btn-mini-compra:hover {
+  background: #019875;
+}
 
 </style>
 
