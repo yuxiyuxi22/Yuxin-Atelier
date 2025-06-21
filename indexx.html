@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Sitio HD</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fffaf7;
+      padding: 2rem;
+    }
+  .catalogo-cursos {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+.curso-card {
+  min-height: 500px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+.curso-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.curso-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.curso-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #00bfff;
+}
+
+.curso-card p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+}
+  .course-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.course-grid  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por fila en desktop */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  width: 100%;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.course-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fffafc, #ffe4f0, #cceeff);
+  color: #333;
+}
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      background-color: #aee9f8;
+      color: #000;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .active-dot {
+      background-color: #00bfff;
+      
+      @media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+    }
+
+    .venta-simulada {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.venta-simulada.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+ .img-wrapper {
+      width: 100%;
+      padding-top: 100%; /* cuadrado perfecto */
+      position: relative;
+      background: #eee;
+    }
+
+.img-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* recorta sin deformar */
+      display: block;
+    }
+
+.curso-rating {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.estrella {
+  color: #fbbc04;
+  font-size: 1.1rem;
+  margin: 0 1px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.curso-card:hover .estrella {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 4px #fbbc04);
+}
+
+ .btn-mini-compra {
+  display: inline-block;
+  background: #00b894;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: center;
+  transition: background 0.3s ease;
+}
+
+.btn-mini-compra:hover {
+  background: #019875;
+}
+
+.btn-ver-mas {
+  display: block;
+  margin: 2rem auto;
+  background: #00bfff;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-ver-mas:hover {
+  background: #00a6d4;
+}
+  
+@media (max-width: 1080px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img-wrapper {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background: #eee;
+}
+
+.img-wrapper img {
+  position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* recorta sin deformar */
+      display: block;
+    }
+
+</style>
+
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <!-- Pon aquí la URL de tu logo -->
+    <img src="https://i.imgur.com/8AAqzLu.jpeg" alt="Logo" class="logo">
+    <nav class="nav-links">
+      <a href="quienes-somos-rosa.html">¿Quiénes somos?</a>
+      <a href="catalogo-filter.html">Cursos</a>
+      <a href="/testimonios-slider.html">Testimonios</a>
+      <a href="contact.html">Contacto</a>
+      <a href="#blog">Blog</a>
+    </nav>
+  </header>
+
+  <!-- SLIDESHOW -->
+  <section class="slideshow-container">
+    <!-- Cambia las rutas de las imágenes abajo -->
+    <div class="slide"><img src="https://i.imgur.com/zqlUlrM.jpeg" alt="Curso 1"></div>
+    <div class="slide"><img src="/img/SLIDE 2  .png" alt="Curso 2"></div>
+    <div class="slide"><img src="ruta-imagen-3.jpg" alt="Curso 3"></div>
+    <div class="slide"><img src="ruta-imagen-4.jpg" alt="Curso 4"></div>
+    <div class="slide"><img src="ruta-imagen-5.jpg" alt="Curso 5"></div>
+    <div class="slide"><img src="ruta-imagen-6.jpg" alt="Curso 6"></div>
+    <div class="slide"><img src="ruta-imagen-7.jpg" alt="Curso 7"></div>
+
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+    </div>
+  </section>
+  <!-- CURSOS -->
+<section id="cursos" class="course-section">
+  <h2>Nuestros Cursos</h2>
+  <div class="course-grid">
+    <!-- Curso 1 -->
+  <div class="course-card">
+    <a href="curso1.html" target="_blank">
+      <div class="img-wrapper">
+        <img src="img/curso-post-hd.png" alt="Curso 1" loading="lazy">
+      </div>
+      <div class="curso-rating" data-rating="4">★★★★☆</div>
+      <h3>Método Lash Art</h3>
+      <span class="categoria">Belleza</span>
+      <p class="desc">Aprende desde cero</p>
+    </a>
+    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+  </div>
+
+  <!-- Curso 2 -->
+  <div class="course-card">
+    <a href="curso2.html" target="_blank">
+      <div class="img-wrapper">
+        <img src="img/curso-post-hd" alt="Curso 2" loading="lazy">
+      </div>
+      <div class="curso-rating" data-rating="5">★★★★★</div>
+      <h3>Polygel Profesional</h3>
+      <span class="categoria">Belleza</span>
+      <p class="desc">Técnica completa paso a paso</p>
+    </a>
+    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+  </div>
+
+  <!-- Curso 3 -->
+  <div class="course-card">
+    <a href="curso3.html" target="_blank">
+      <div class="img-wrapper">
+        <img src="img/curso-post-hd" alt="Curso 3" loading="lazy">
+      </div>
+      <div class="curso-rating" data-rating="3">★★★☆☆</div>
+      <h3>Manicura Rusa</h3>
+      <span class="categoria">Belleza</span>
+      <p class="desc">Domina la técnica y gana clientas</p>
+    </a>
+    <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+  </div>
+    <!-- Curso 4 -->
+    <a href="curso4.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 4"  loading= "lazy"></div>
+       <div class="curso-rating" data-rating="5">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Yoga Facial con Aromaterapia</h3>
+      <p>Incluye certificado</p>
+    </a>
+
+    <!-- Curso 5 -->
+    <a href="curso5.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 5" loading= "lazy"></div>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Inicia tu Negocio de Skincare</h3>
+      <p>Acceso a comunidad privada</p>
+    </a>
+
+    <!-- Curso 6 -->
+    <a href="curso6.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 6"  loading= "lazy"></div>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Curso 6</h3>
+      <p>Actualizaciones constantes</p>
+    </a>
+
+     <!-- Curso 7 -->
+    <a href="curso5.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 7"  loading= "lazy"></div>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Inicia tu Negocio de Skincare</h3>
+      <p>Acceso a comunidad privada</p>
+    </a>
+
+    <!-- Curso 8 -->
+    <a href="curso6.html" class="course-card">
+      <div class="img-wrapper"><img src="/img/curso-post-hd.png" alt="Curso 8"  loading= "lazy"></div>
+       <div class="curso-rating" data-rating="4">
+  <!-- estrellas se llenarán automáticamente -->
+</div>
+      <h3>Curso 6</h3>
+      <p>Actualizaciones constantes</p>
+    </a>
+</div>
+
+
+</section>
+<!-- Boton ver más -->
+<button onclick="window.open('catalogo-filter.html', '_blank')" class="btn-ver-mas">
+  Ver más cursos
+</button>
+
+
+
+
+  <script>
+    let slideIndex = 1;
+    document.addEventListener("DOMContentLoaded", () => showSlides(slideIndex));
+
+    showSlides(slideIndex);
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active-dot");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].classList.add("active-dot");
+    }
+
+    // Optional autoplay
+    setInterval(() => {
+      slideIndex++;
+      showSlides(slideIndex);
+    }, 5000); // Cambia el tiempo si quieres
+  </script>
+
+<div class="venta-simulada" id="venta-simulada">
+  <i class="fas fa-check-circle"></i>
+  <span id="mensaje-venta">Lucía R. de Colombia se unió al curso hace 3 minutos</span>
+</div>
+
+<script>
+const nombres = [
+  "Lucía R.", "José M.", "Daniela P.", "Carlos T.", "Valeria N.",
+  "Mateo G.", "Ana L.", "Santiago R.", "Camila S.", "Andrés Z."
+];
+
+const paises = ["México", "Perú", "Argentina", "Chile", "Colombia"];
+
+const tiempos = ["hace 2 minutos", "hace 5 minutos", "hace 10 minutos", "justo ahora", "hace 1 minuto"];
+
+function mostrarVentaSimulada() {
+  const nombre = nombres[Math.floor(Math.random() * nombres.length)];
+  const pais = paises[Math.floor(Math.random() * paises.length)];
+  const tiempo = tiempos[Math.floor(Math.random() * tiempos.length)];
+
+  const mensaje = `${nombre} de ${pais} se unió al curso ${tiempo}`;
+  document.getElementById("mensaje-venta").textContent = mensaje;
+
+  const popup = document.getElementById("venta-simulada");
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000); // dura 5 segundos visible
+}
+
+setInterval(mostrarVentaSimulada, 15000); // aparece cada 15 segundos
+</script>
+
+<script>
+  document.querySelectorAll('.curso-rating').forEach(el => {
+    const rating = parseInt(el.dataset.rating);
+    el.innerHTML = '';
+
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement('span');
+      star.classList.add('estrella');
+      star.innerHTML = i <= rating ? '&#9733;' : '&#9734;';
+      el.appendChild(star);
+    }
+  });
+</script>
+
+</body>
+</html>
