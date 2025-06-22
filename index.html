@@ -310,16 +310,6 @@
   background: #00a6d4;
 }
   
-@media (max-width: 1080px) {
-  .course-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .course-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .img-wrapper {
   width: 100%;
@@ -381,6 +371,17 @@ a:active {
   color: inherit;
 }
 
+@media (max-width: 1024px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 
