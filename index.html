@@ -22,8 +22,9 @@
 
 .catalogo {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
     }
 
 .curso-card {
@@ -371,6 +372,17 @@ a:active {
   color: inherit;
 }
 
+@media (max-width: 768px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .course-card {
+    height: auto; /* muy importante en móvil */
+  }
+}
+
 @media (max-width: 1024px) {
   .catalogo {
     grid-template-columns: repeat(2, 1fr);
@@ -381,6 +393,8 @@ a:active {
   .catalogo {
     grid-template-columns: 1fr;
   }
+
+  
 }
 </style>
 
@@ -441,8 +455,6 @@ a:active {
   </a>
   <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
 </div>
-
-</a>
     
 
     <!-- Curso 2 -->
@@ -458,21 +470,23 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
+
     <!-- Curso 3 -->
      <div class="course-card">
-    <a href="curso2.html" target="_blank">
-      <div class="img-wrapper">
-        <img src="/img/curso-yoga-hd.png" alt="Curso 2"  loading= "lazy">
-      </div>
-<div class="curso-rating" data-rating="5"></div>
-      <h3>Yoga Facial desde cero</h3>
-      <span class="categoria">Belleza</span>
-      <p></p>
-    </a>
-    <a href="https://go.hotmart.com/L99861652T?ap=5087" target="_blank" class="btn-mini-compra">Comprar</a>
+  <a href="curso1.html" target="_blank">
+    <div class="img-wrapper">
+      <img src="/img/curso-yoga-hd.png" alt="Curso 1" loading="lazy">
     </div>
-</a>
+    <div class="curso-rating" data-rating="4"></div>
+    <div class="course-info">
+    <h3>Yoga Facial desde cero</h3>
+    <span class="categoria">Belleza</span>
+    <p class="desc"></p>
+    </div>
+  </a>
+  <a href="https://hotmart.com/tu-link-de-compra" target="_blank" class="btn-mini-compra">Comprar</a>
+</div>
+
 
     <!-- Curso 4 -->
      <div class="course-card">
@@ -487,7 +501,7 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
+
   
     <!-- Curso 5 -->
      <div class="course-card">
@@ -502,7 +516,6 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
 
 
     <!-- Curso 6 -->
@@ -518,7 +531,7 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
+
 
      <!-- Curso 7 -->
      <div class="course-card">
@@ -533,7 +546,7 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
+
 
     <!-- Curso 8 -->
      <div class="course-card">
@@ -548,8 +561,7 @@ a:active {
     </a>
     <a href="https://go.hotmart.com/F99881540K?ap=152a" target="_blank" class="btn-mini-compra">Comprar</a>
     </div>
-</a>
-</div>
+
 
 
 </section>
