@@ -8,29 +8,150 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #fffafc, #ffe4f0, #cceeff);
-      color: #333;
+      background: #fffaf7;
+      padding: 2rem;
     }
+  .catalogo-cursos {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.curso-card {
+  min-height: 500px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+.curso-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.curso-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+.curso-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #00bfff;
+}
+
+.curso-card p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+  .course-section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.course-grid  {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 por fila en desktop */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  padding: 0rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.course-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+
+.desc{
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555
+}
+
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fffafc, #ffe4f0, #cceeff);
+  color: #333;
+}
+
+    /* Navbar */
     .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #fff;
       padding: 1rem 2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      flex-wrap: wrap;
     }
+
     .logo {
       width: 120px;
       height: auto;
     }
+
     .nav-links {
+  margin-left: auto;
+
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1rem;
+      gap: 2rem;
     }
+
     .nav-links a {
       text-decoration: none;
       color: #333;
@@ -38,10 +159,13 @@
       border-radius: 999px;
       transition: all 0.3s ease;
     }
+
     .nav-links a:hover, .nav-links a.active {
       background-color: #aee9f8;
       color: #000;
     }
+
+    /* Slideshow */
     .slideshow-container {
       max-width: 1000px;
       margin: 3rem auto;
@@ -50,19 +174,23 @@
       overflow: hidden;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
+
     .slide {
       display: none;
       width: 100%;
     }
+
     .slide img {
       width: 100%;
       height: auto;
       border-radius: 20px;
     }
+
     .dots {
       text-align: center;
       margin-top: 1rem;
     }
+
     .dot {
       height: 12px;
       width: 12px;
@@ -72,129 +200,182 @@
       display: inline-block;
       transition: background-color 0.3s ease;
     }
+
     .active-dot {
       background-color: #00bfff;
-    }
-    .catalogo {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      padding: 1rem;
-    }
-    .course-card {
-      background-color: #fff;
-      border-radius: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      text-decoration: none;
-      color: #333;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .course-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    .img-wrapper {
+      
+  
+  }
+
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+    .venta-simulada {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.venta-simulada.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+ .img-wrapper {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      padding-top: 100%; /* cuadrado perfecto */
       position: relative;
       background: #eee;
     }
-    .img-wrapper img {
+
+.img-wrapper img {
       position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* recorta sin deformar */
+      display: block;
+    }
+
+/* Estrellas brillantes animadas */
+.curso-rating {
+  font-size: 1.1rem;
+  color: #f1c40f;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.curso-rating .estrella {
+  animation: shine 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes shine {
+  0%   { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.2); opacity: 1; }
+}
+
+.curso-rating .estrella:hover {
+  animation: shine 0.6s forwards;
+  cursor: pointer;
+}
+
+    
+.btn-ver-mas {
+  display: block;
+  margin: 2rem auto;
+  background: #00bfff;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-ver-mas:hover {
+  background: #00a6d4;
+}
+  
+
+.img-wrapper {
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+  background: #eee;
+}
+
+.img-wrapper img {
+  position: absolute;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* recorta sin deformar */
       display: block;
-    }
-    .curso-rating {
-      font-size: 1.1rem;
-      color: #f1c40f;
-      margin: 0.5rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 2px;
-    }
-    .curso-rating .estrella {
-      animation: shine 1.5s infinite ease-in-out alternate;
-    }
-    @keyframes shine {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(1.2); opacity: 1; }
-    }
-    .curso-rating .estrella:hover {
-      animation: shine 0.6s forwards;
-      cursor: pointer;
-    }
-    .course-info {
-      padding: 1rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .course-card h3 {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-      color: #00bfff;
-    }
-    .course-card p, .desc {
-      font-size: 0.9rem;
-      color: #555;
     }
     .btn-mini-compra {
-      background: #ff6f91;
-      color: white;
-      padding: 0.4rem 1rem;
-      font-size: 0.8rem;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      margin: 1rem auto;
-      transition: transform 0.3s ease;
-      display: inline-block;
+  display: inline-block;
+  background: #ff6f91;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
+  align-self: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0.3s ease;
+  
+}
+
+
+.btn-mini-compra:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12 px rgba(0, 0, 0, 0.2);
+  background: #ff6f91
+  
+}
+
+.btn-mini-compra:visited,
+.btn-mini-compra:active {
+  background: #ff6f91;
+  color: white;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+.catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
-    .btn-mini-compra:hover {
-      transform: scale(1.08);
-      background: #ff4d75;
-    }
-    .btn-mini-compra:visited, .btn-mini-compra:active {
-      background: #ff6f91;
-      color: white;
-    }
-    .btn-ver-mas {
-      display: block;
-      margin: 2rem auto;
-      background: #00bfff;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .btn-ver-mas:hover {
-      background: #00a6d4;
-    }
-    @media (max-width: 768px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 1rem;
-      }
-      .course-grid {
-        grid-template-columns: 1fr;
-      }
-      .course-card {
-        height: auto;
-      }
-    }
-  </style>
+@media (max-width: 768px) {
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+    height: auto; /* muy importante en móvil */
+  }
+}
+</style>
+
+
 </head>
 <body>
 
