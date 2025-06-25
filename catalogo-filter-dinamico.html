@@ -115,14 +115,15 @@
     let cursos = [];
 
     fetch(URL)
-      .then(res => res.json())
-      .then(data => {
-        console.log(data) ;
-        cursos = data;
-        renderCursos('Todos');
-      });
-      .catch(err => console.error('Fetch error:', err));
-
+      fetch(URL)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data); // <<— pon este console.log para checar en DevTools
+    cursos = data;
+    renderCursos('Todos');
+  })
+  .catch(err => console.error('Fetch error:', err));
+  
     botones.forEach(btn => {
       btn.addEventListener('click', () => {
         const filtro = btn.getAttribute('data-filter');
