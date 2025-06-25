@@ -48,13 +48,11 @@
     }
     .course-card {
       background-color: white;
-      aspect-ratio: 1 / 1; /* 👈 esto fuerza la tarjeta a ser cuadrada */
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       transition: transform 0.3s ease;
     }
     .course-card:hover {
@@ -66,28 +64,28 @@
       object-fit: cover;
     }
     .course-info {
-  padding: 0.5rem;
-  font-size: 0.85rem;
-  overflow: hidden;
-}
+      padding: 1rem;
+      text-align: center;
+    }
     .course-info h3 {
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
       color: #00bfff;
     }
     .course-info p {
-  font-size: 0.8rem;
-}
-    
+      font-size: 0.9rem;
+      color: #555;
+    }
     .btn {
-  display: block;
-  width: 80%;
-  margin: 0.3rem auto;
-  text-align: center;
-  padding: 0.5rem 0.8rem;
-  font-size: 0.85rem;
-  border-radius: 20px;
-}
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      margin: 0.25rem;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
     .btn:hover {
       opacity: 0.9;
     }
