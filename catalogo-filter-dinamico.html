@@ -118,49 +118,32 @@
 
   <div class="catalogo" id="catalogo"></div>
 
-  <script>
-    const URL = 'https://opensheet.elk.sh/1-kCH7qasFwyLh10KUuULjvMLN_PmVvEJeacbUnS0qb4/Hoja1';
-    const catalogo = document.getElementById('catalogo');
-    const botones = document.querySelectorAll('.filtros button');
-
-    let cursos = [];
-
+   <script>
+    const URL = "https://opensheet.elk.sh/1-kCH7qasFwyLh10KUuULjvMLN_PmVvEJeacbUnS0qb4/Hoja1";
+    // fetch con validación
     fetch(URL)
-      .then(res => res.json())
-      .then(data => {
-        cursos = data;
-        renderCursos('Todos');
+      .then(res => {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
       })
-      .catch(err => console.error('Fetch error:', err));
-
-    botones.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filtro = btn.getAttribute('data-filter');
-        renderCursos(filtro);
-        botones.forEach(b => b.classList.remove('filtro-activo'));
-        btn.classList.add('filtro-activo');
+      .then(data => {
+        console.log('JSON:', data);
+        const cursos = Array.isArray(data) ? data : [];
+        document.getElementById('contador').textContent = `Cursos cargados: ${cursos.length}`;
+        render(cursos, 'Todos');
+      })
+      .catch(err => {
+        console.error('Error fetch:', err);
+        document.getElementById('contador').textContent = 'Error cargando cursos';
       });
-    });
 
-    function renderCursos(categoria) {
-      catalogo.innerHTML = '';
-      cursos.forEach(curso => {
-        if (categoria === 'Todos' || curso.categoria === categoria) {
-          const card = document.createElement('div');
-          card.className = 'course-card';
-          card.innerHTML = `
-            <img src="${curso.imagen}" alt="${curso.titulo}">
-            <div class="course-info">
-              <h3>${curso.titulo}</h3>
-              <p>${curso.descripcion}</p>
-              <a href="${curso.linkCurso}" target="_blank" class="btn btn-ver-curso">Ver curso</a>
-              <a href="${curso.linkCompra}" target="_blank" class="btn btn-mini-compra">Comprar</a>
-            </div>`;
-          catalogo.appendChild(card);
-        }
-      });
+    function render(cursos, cat) {
+      const catDiv = document.getElementById('catalogo');
+      catDiv.innerHTML = '';
+      const filt = cursos.filter(c => cat === 'Todos' || c.categoria === cat);
+      filt.forEach(c => { /* armado de cards */ });
+      document.getElementById('contador').textContent = `Mostrados: ${filt.length} / ${cursos.length}`;
     }
   </script>
-
 </body>
 </html>
