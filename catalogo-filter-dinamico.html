@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Cursos Dinámico</title>
+  <title>Catálogo de Cursos</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -98,8 +98,10 @@
   <div class="filtros">
     <button data-filter="Todos" class="filtro-activo">Todos</button>
     <button data-filter="Belleza">Belleza 💅</button>
-    <button data-filter="Marketing">Marketing 📈</button>
+    <button data-filter="Jardinería">Marketing 📈</button>
     <button data-filter="Negocios">Negocios 💼</button>
+    <button data-filter="Bienestar">Negocios 💼</button>
+    <button data-filter="Habilidades">Negocios 💼</button>
   </div>
 
   <div class="catalogo" id="catalogo"></div>
@@ -135,13 +137,14 @@
           const card = document.createElement('div');
           card.className = 'course-card';
           card.innerHTML = `
-            <img src="${curso.imagen}" alt="${curso.titulo}">
-            <div class="course-info">
-              <h3>${curso.titulo}</h3>
-              <p>${curso.descripcion}</p>
-              <a href="${curso.linkCompra}" target="_blank" class="btn-mini-compra">Comprar</a>
-            </div>
-          `;
+             <img src="${curso.imagen}" alt="${curso.titulo}">
+  <div class="course-info">
+    <h3>${curso.titulo}</h3>
+    <p>${curso.descripcion}</p>
+    <a href="${curso.linkCurso}" target="_blank" class="btn">Ver curso</a>
+    <a href="${curso.linkCompra}" target="_blank" class="btn btn-mini-compra">Comprar</a>
+  </div>
+`;
           catalogo.appendChild(card);
         }
       });
